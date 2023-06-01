@@ -1,0 +1,13 @@
+1. 打开 git-bash , 新建一个文件夹dir
+2. 进入dir,输入 git init 将这个目录变成仓库，会出现一个隐藏文件 .git 
+3. 添加文件: 编辑保存一个文件, 然后
+    git add <filename>    将文件放入暂存区
+    git commit -m ''      将文件提交到分支
+可同时 add多个文件, 然后一并commit
+
+常用命令：
+git status   查看文件状态，是否被改动过
+git diff     查看文件被修改的内容
+rm  <filename>  删除掉工作区的文件，但分支上的文件并没有被删除
+如果想删除分支上的文件:   git rm <filename>  并 git commit -m ''
+如果是误删, 使用 git checkout -- <filename> 恢复, 当然只能恢复分支上保存的文件
