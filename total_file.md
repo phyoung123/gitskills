@@ -13,7 +13,7 @@ rm  <filename>  删除掉工作区的文件，但分支上的文件并没有被�
 如果是误删, 使用 git checkout -- <filename> 恢复, 当然只能恢复分支上保存的文件
 
 
-一、将本地文件推送到远程仓库
+# 一、将本地文件推送到远程仓库
 1. 首先在GitHub上创建一个仓库
 2. 在本地文件夹下运行：
 git remote add <name> git@github.com:phyoung123/gitskills
@@ -26,13 +26,13 @@ git remote add <name> git@github.com:phyoung123/gitskills
     后续直接git push <name> master
 
 
-二、从远程库克隆
+# 二、从远程库克隆
     git clone git@github.com:phyoung123/gitskills 
     这是ssh协议, 传输很快
     除此之外还可以 git clone htts://github.com/.....
     这是http协议,比较慢
 
-三、创建分支
+# 三、创建分支
 当在团队多人协同操作一个文件时, 可以先创建一个自己的分支, 然后再合并过去
 首先用 git branch 查看当前有哪些分支
 
@@ -44,6 +44,6 @@ git remote add <name> git@github.com:phyoung123/gitskills
 2. 在分支上修改的内容不会引起master分支的变化, 需要 git merge <name> 将分支 merge 到master上
     合并完后就可以删除分支 git branch -d <name>
 
-总的流程就是
+# 总的流程就是
 
 git add → git commit -m '' → git remote add <name> git@github.com:... → git push -u <name> master 
