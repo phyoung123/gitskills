@@ -16,14 +16,14 @@ rm  <filename>  删除掉工作区的文件，但分支上的文件并没有被�
 # 一、将本地文件推送到远程仓库
 1. 首先在GitHub上创建一个仓库
 2. 在本地文件夹下运行：
-git remote add <name> git@github.com:phyoung123/gitskills
+git remote add [<name>] git@github.com:phyoung123/gitskills
     首次推送是要用add将仓库命名
     git remote -v 查看当前文件夹下面添加了哪些远程库
 
 3. 把本地库推送到远程库上
-    git push -u <name> master
+    git push -u [<name>] master
     第一次推送时要加 -u ,将本地master分支与远程master分支关联
-    后续直接git push <name> master
+    后续直接git push [<name>] master
 
 
 # 二、从远程库克隆
@@ -37,13 +37,13 @@ git remote add <name> git@github.com:phyoung123/gitskills
 首先用 git branch 查看当前有哪些分支
 
 1. 创建分支并切换过去
-    git checkout -b <name> 或者 git switch -c <name>
+    git checkout -b [<name>] 或者 git switch -c [<name>]
     单纯创建一个分支
-    git switch <name>
+    git switch [<name>]
 
-2. 在分支上修改的内容不会引起master分支的变化, 需要 git merge <name> 将分支 merge 到master上
-    合并完后就可以删除分支 git branch -d <name>
+2. 在分支上修改的内容不会引起master分支的变化, 需要 git merge [<name>] 将分支 merge 到master上
+    合并完后就可以删除分支 git branch -d [<name>]
 
 # 总的流程就是
 
-git add → git commit -m '' → git remote add <name> git@github.com:... → git push -u <name> master 
+git add → git commit -m '对这次修改的描述' → git remote add [<name>] git@github.com:... → git push -u [<name>] master 
